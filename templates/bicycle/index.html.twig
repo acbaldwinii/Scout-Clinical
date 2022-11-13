@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Bike Builder</h1>
+    <div>
+    You have selected the {{ post.getFrame() }} frame, {{ post.getTires() }} tires, {{ post.getBrakes() }} brakes,
+    with a {{ post.getSeat() }} seat in the color {{ post.getColor() }}
+    </div>
+
+{% for message in app.flashes('success') %}
+    <div style="color: green">{{ message }}</div>
+{% endfor %}
+{% endblock %}
